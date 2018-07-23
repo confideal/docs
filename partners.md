@@ -5,26 +5,36 @@
 To create a new contract, you need to redirect the user to https://app.confideal.io/create with the following parameters:
 
 * **Mandatory:**  
-  ```
-    partner - your account address
-  ```
+    `partner` - your account address
 
-* **Optional:**
-  ```
-    returnURL=[string] - a URL where the user will be redirected
-    name=[string] - contract name
-    counterparty=[string] - counterparty's account address
-    agreement=[string] - contract details (applicable terms and conditions)
-    pricePerUnit=[number] - price per unit
-    quantity=[number] - quantity of units
-    advancePaymentPct=[number] - advance payment, %% of the contract price
-    lateFeeApply=[boolean] - enable late fee
-    lateFeeRatePct=[number] - late fee, %% of the contract price
-    lateFeeMaxPct=[number] - late fee, %% of the contract price
-    clientsContacts=[string] - client's (buyer's) email address
-    contractorsContacts=[stirng] - contractor's (seller's) email address
-    arbitrationClause=[boolean] - arbitration clause switch
-  ```
+* **Optional:**  
+    `returnURL(string)` - a URL where the user will be redirected  
+    `name(string)` - contract name  
+    `counterparty(string)` - counterparty's account address  
+    `agreement(string)` - contract details (applicable terms and conditions)  
+    `pricePerUnit(number)` - price per unit  
+    `quantity(number)` - quantity of units  
+    `advancePaymentPct(number)` - advance payment, %% of the contract price  
+    `periodToHour(enum[number])` - period to hour  
+    &nbsp;&nbsp;&nbsp;&nbsp;`0-23` - hours  
+    `periodToDate(string)` - period to date  
+    `lateFeeApply(boolean)` - enable late fee  
+    `lateFeeRatePct(number)` - late fee, %% of the contract price  
+    `lateFeeMaxPct(number)` - late fee, %% of the contract price  
+    `lateFeeInterval(enum[number])` - late fee interval  
+    &nbsp;&nbsp;&nbsp;&nbsp;`3600` - hourly  
+    &nbsp;&nbsp;&nbsp;&nbsp;`86400` - daily  
+    &nbsp;&nbsp;&nbsp;&nbsp;`604800` - weekly  
+    `confidealFeePayer(enum[number])` - confideal fee payer switch  
+    &nbsp;&nbsp;&nbsp;&nbsp;`0` - client  
+    &nbsp;&nbsp;&nbsp;&nbsp;`1` - contractor  
+    `clientsContacts(string)` - client's (buyer's) email address  
+    `contractorsContacts(string)` - contractor's (seller's) email address  
+    `arbitrationClause(boolean)` - arbitration clause switch  
+
+## Show a contract by its hash
+
+To show to a user his contract by its hash, you need to redirect the user to https://app.confideal.io/details/:hash
 
 ## Retrieving all contracts
 
