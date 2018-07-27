@@ -10,6 +10,9 @@ To create a new contract, you need to redirect the user to https://app.confideal
 * **Optional:**  
     `returnURL(string)` - a URL where the user will be redirected  
     `name(string)` - contract name  
+    `party(enum[number])` - side of the contract сreator  
+    &nbsp;&nbsp;&nbsp;&nbsp;`0` - client  
+    &nbsp;&nbsp;&nbsp;&nbsp;`1` - contractor  
     `counterparty(string)` - counterparty's account address  
     `agreement(string)` - contract details (applicable terms and conditions)  
     `pricePerUnit(number)` - price per unit  
